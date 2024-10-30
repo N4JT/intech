@@ -1,6 +1,6 @@
 <?php
 echo "
-<form method='POST' action='./../functions/register.php'>
+<form method='POST' action='./../functions/database/register.php'>
     <label for='username'>Username:</label>
     <input type='text' id='username' name='username' required>
     <br>
