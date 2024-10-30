@@ -1,0 +1,5 @@
+<?php
+echo "
+
+<h1>NIE SI PRIHLASENY, MAL BY SI SA NAJPRV PRIHLASIT</h1>"
+?>
