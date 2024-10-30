@@ -1,13 +1,12 @@
 <?php
 
-require("./db.php");
-require ('./../functions/utils/getUser.php');
+require("db.php");
+require(__DIR__ . "/../utils/getUser.php");
 
 if($_SERVER["REQUEST_METHOD"] == "POST"){ 
     $date = $_POST["date"];
     $title = $_POST["title"];
-    $sql = "INSERT INTO orders (order_id, title, date, userID) VALUES (null,'Product Name', '2024-10-30',$user_id)";
-    $result = $conn->query($sql);  
+    $sql = "INSERT INTO orders (order_id, title, date, userID) VALUES (null,'$title', '$date',$userId)";
     if ($conn->query($sql) === TRUE) {
         echo "executed takze by to melo fungovat LULW";
     } else {
