@@ -1,12 +1,13 @@
 <?php
-
+include "./components/head.php";
 require('./../functions/utils/getUser.php');
 require('./../functions/database/loadData.php');
 ?>
 
-<form id="orderSelectionForm">
-    <label for="orderSelect">Select an Order:</label>
-    <select id="orderSelect" name="order_id" onchange="loadOrderData()"> 
+<div class="data-container">
+    <div class="data-content">
+    <form id="editOrderForm" class="data-form" action="./../functions/database/remove.php" method="POST">
+<select id="orderSelect" name="order_id" onchange="loadOrderData()"> 
         <option value="">Select an order</option>
         <?php foreach ($orders as $order): ?>
             <option value="<?php echo htmlspecialchars($order['order_id']); ?>">
@@ -14,12 +15,12 @@ require('./../functions/database/loadData.php');
             </option>
         <?php endforeach; ?>
     </select>
-</form>
-
-<form id="editOrderForm" action="./../functions/database/remove.php" method="POST" style="display:none;">
     <input type="hidden" name="order_id" id="order_id">
     <input type="submit" value="Remove Order">
 </form>
+    </div>
+</div>
+
 
 <script>
 function loadOrderData() {
@@ -28,9 +29,7 @@ function loadOrderData() {
 
     if (orderId) {
         document.getElementById("order_id").value = orderId;
-        document.getElementById("editOrderForm").style.display = "block";
-    } else {
-        document.getElementById("editOrderForm").style.display = "none";
-    }
+       
+    } 
 }
 </script>
