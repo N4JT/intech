@@ -17,11 +17,21 @@ include "./../functions/database/loadData.php";
 <?php
 include './components/menu.php';
 ?>
+<script>
+     const handleEdit = (id) => {
+        window.location.href = `./edit.php?order_id=${id}`;
+    };
+
+    const handleRemove = (id) => {
+        window.location.href = `./remove.php?order_id=${id}`;
+    }
+    </script>
+    
 <div class="data-container">
    
 <?php
 foreach ($orders as $order) {
-    echo "<div class=data-content><div>" . htmlspecialchars($order['date']) . "</div> <div>" . htmlspecialchars($order['title']) . "</div><div class=data-icons><span class=material-symbols--edit></span> <span class=pajamas--remove></span></div></div>";
+    echo "<div class=data-content><div>" . htmlspecialchars($order['date']) . "</div> <div>" . htmlspecialchars($order['title']) . "</div><div class=data-icons><span class=material-symbols--edit onClick=handleEdit(".htmlspecialchars($order['order_id']) .")></span> <span class=pajamas--remove onClick=handleRemove(".htmlspecialchars($order['order_id']) .")></span></div></div>";
     echo "<div class=line></div>";
 }
 
@@ -31,6 +41,7 @@ foreach ($orders as $order) {
 </div>
 </div>
 </div>
+
 </body>
 
 
