@@ -16,10 +16,20 @@ include "./../functions/database/loadData.php";
 
 <?php
 include './components/menu.php';
-foreach ($orders as $order) {
-    echo "<div class=data-container><div>" . htmlspecialchars($order['date']) . " " . htmlspecialchars($order['title']) . "</div> <span class=pajamas--remove></span></div>";
-}
 ?>
+<div class="data-container">
+   
+<?php
+foreach ($orders as $order) {
+    echo "<div class=data-content><div>" . htmlspecialchars($order['date']) . "</div> <div>" . htmlspecialchars($order['title']) . "</div><div class=data-icons><span class=material-symbols--edit></span> <span class=pajamas--remove></span></div></div>";
+    echo "<div class=line></div>";
+}
+
+?>
+<div class="data-content-button">
+    createNEW
+</div>
+</div>
 </div>
 </body>
 

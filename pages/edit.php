@@ -1,5 +1,5 @@
 <?php
-
+include "./components/head.php";
 require('./../functions/utils/getUser.php');
 require('./../functions/database/loadData.php');
 ?>
