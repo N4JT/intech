@@ -3,5 +3,33 @@
 .data-container{
     display: flex;
     flex-direction: row;
+    background-color:red;
 
+}
+body{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    background-image: url('../img/background16x9.png');
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    height: 100vh; 
+    margin: 0; 
+}
+
+.content{
+     width: 80dvw;
+     height:80dvh;
+}
+.nadpis{
+    text-align:center;
+}
+
+.menu{ 
+    font-size:20px;
+    display:flex;
+    justify-content:space-around;
+    padding:30px;
 }

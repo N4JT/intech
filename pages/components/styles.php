@@ -13,6 +13,12 @@ body{
     flex-direction:column;
     justify-content:center;
     align-items:center;
+    background-image: url('../public/img/background16x9.png');
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    height: 100vh; 
+    margin: 0; 
 }
 
 .content{

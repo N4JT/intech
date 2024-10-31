@@ -2,11 +2,12 @@
 
 
 <?php
-
+include "./components/head.php";
 include './../functions/utils/getUser.php';
 include "./../functions/database/loadData.php";
 
 ?>
+
 
 <div class="content">
     <h1 class=nadpis>
@@ -20,5 +21,6 @@ foreach ($orders as $order) {
 }
 ?>
 </div>
+</body>
 
 

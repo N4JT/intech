@@ -1,7 +1,7 @@
 <?php
 
-include 'styles.php';
 ?>
+<body>
 <div class="menu-container">
     <div class="menu">
         <a href="./add.php" class="add">PRIDAJ</a>
@@ -10,3 +10,4 @@ include 'styles.php';
         <a href= "./dashboard.php " class= "showall" >ZOBRAZ VSETKY</a>
     </div>
 </div> 
+
