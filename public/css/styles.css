@@ -55,6 +55,18 @@
         border:.5px solid white;
         border-radius: 15px;
     }
+    input[type="date"] {
+        cursor: pointer;
+        width: 100%;              
+        height: 40px;             
+        padding: 10px;             
+        font-size: 15px;           
+        border-radius: 15px;        
+        background-color: transparent; 
+        color: black;   
+        border:.5px solid black;  
+        filter:invert(1); 
+    }
     label{
         font-size: 12px;
         padding:5px;
