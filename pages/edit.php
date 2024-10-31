@@ -3,9 +3,12 @@ include "./components/head.php";
 require('./../functions/utils/getUser.php');
 require('./../functions/database/loadData.php');
 ?>
+<div class="data-container">
+    <div class="data-content">
 
-<form id="orderSelectionForm">
-    <label for="orderSelect">Select an Order:</label>
+<form id="editOrderForm" class="data-form" action="./../functions/database/edit.php" method="POST">
+    
+<label for="orderSelect">Select an Order:</label>
     <select id="orderSelect" name="order_id" onchange="loadOrderData()"> 
         <option value="">Select an order</option>
         <?php foreach ($orders as $order): ?>
@@ -14,10 +17,8 @@ require('./../functions/database/loadData.php');
             </option>
         <?php endforeach; ?>
     </select>
-</form>
 
-<form id="editOrderForm" action="./../functions/database/edit.php" method="POST" style="display:block;">
-    <input type="hidden" name="order_id" id="order_id">
+<input type="hidden" name="order_id" id="order_id">
     
     <label for="title">Title:</label>
     <input type="text" id="title" name="title" required>
@@ -27,6 +28,9 @@ require('./../functions/database/loadData.php');
     
     <input type="submit" value="Update Order">
 </form>
+    </div>
+</div>
+
 
 <script>
 function loadOrderData() {
@@ -38,7 +42,7 @@ function loadOrderData() {
         fetch(`./../functions/database/getSpecificOrder.php?order_id=${orderId}`)
             .then(response => response.json())
             .then(data => {
-                document.getElementById("editOrderForm").style.display = "block";
+               
                 document.getElementById("order_id").value = data.order_id;
                 document.getElementById("title").value = data.title;
                 document.getElementById("date").value = data.date;
