@@ -9,6 +9,7 @@ if (isset($_GET["order_id"])) {
     if ($result && $result->num_rows > 0) {
         echo json_encode($result->fetch_assoc());
     } else {
+        
         echo json_encode([]);
     }
 }

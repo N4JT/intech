@@ -16,7 +16,7 @@ require('./../functions/database/loadData.php');
     </select>
 </form>
 
-<form id="editOrderForm" action="editOrder.php" method="POST" style="display:none;">
+<form id="editOrderForm" action="./../functions/database/edit.php" method="POST" style="display:block;">
     <input type="hidden" name="order_id" id="order_id">
     
     <label for="title">Title:</label>
@@ -35,17 +35,17 @@ function loadOrderData() {
 
     if (orderId) {
         
-        fetch(`getOrderData.php?order_id=${orderId}`)
+        fetch(`./../functions/database/getSpecificOrder.php?order_id=${orderId}`)
             .then(response => response.json())
             .then(data => {
-             
+                document.getElementById("editOrderForm").style.display = "block";
                 document.getElementById("order_id").value = data.order_id;
                 document.getElementById("title").value = data.title;
                 document.getElementById("date").value = data.date;
-                document.getElementById("editOrderForm").style.display = "block";
+               
             });
     } else {
-        document.getElementById("editOrderForm").style.display = "none";
+      
     }
 }
 </script>
