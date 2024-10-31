@@ -1,6 +1,6 @@
 <?php
 
-include 'head.php';
+include 'styles.php';
 ?>
 <div class="menu-container">
     <div class="menu">
