@@ -1,6 +1,11 @@
+
 <?php
-echo "
-<form method='POST' action='./../functions/database/createNew.php'>
+include "./components/head.php";
+?>
+<div class="data-container">
+    <div class="data-content">
+    <form method='POST' class="data-form" action='./../functions/database/createNew.php'>
+    <h2 class="nadpis">OBJEDNAJ</h2>
     <label for='title'>Title:</label>
     <input type='text' id='title' name='title' required>
     <br>
@@ -9,5 +14,8 @@ echo "
     <br>
     <input type='submit' value='Create NEW'>
 </form>
-";
-?>
+    </div>
+</div>
+
+
+

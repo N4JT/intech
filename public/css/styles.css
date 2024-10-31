@@ -24,7 +24,7 @@
 .data-container{
     display: flex;
     flex-direction: column;
-    border-radius: 25px;
+    border-radius: 40px;
     background-color: rgba(200,200,200,0.1);
     border:1px solid rgba(200,200,200,0.8);
     backdrop-filter: blur(20px);
@@ -41,6 +41,37 @@
 }
 .data-icons{
     margin-right: 10px;
+}
+
+.data-form{ 
+    display:flex;
+    flex-direction:column;
+    margin-left:2dvw;
+    margin-right: 2dvw;
+    input[type="text"],input[type="password"]{
+        all:unset;
+        font-size: 15px;
+        padding:10px;
+        border:.5px solid white;
+        border-radius: 15px;
+    }
+    label{
+        font-size: 12px;
+        padding:5px;
+    }
+    input[type="submit"]{
+        all:unset;
+        background: linear-gradient(159deg, rgba(184,0,255,1) 0%, rgba(95,0,190,1) 100%);
+        text-align: center;
+        border-radius: 20px;
+        padding: 10px;
+        font-size: 15px;
+    }
+    input[type="submit"]:hover{
+        cursor: pointer;
+        transform: scale(1.1);
+
+    }
 }
 .line{
     width: 100%;
