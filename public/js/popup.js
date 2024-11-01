@@ -5,10 +5,16 @@ const callPopup = (id) => {
     popup.classList.add("popup");
 
     popup.innerHTML = `
-        <div class="popup-content">
-            <p>Popup s ID: ${id}</p>
+    <div class="data-container">
+  <div class="data-content">
+        <div class="data-form">
+         <p>Popup s ID: ${id}</p>
             <button onclick="closePopup()">Close</button>
         </div>
+           
+        </div>
+    </div>
+      
     `;
 
     body.appendChild(popup); 
