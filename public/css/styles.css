@@ -55,7 +55,13 @@
         width: 30%;
        
     }
+    div.full{
+        width: 100% !important;
+        text-align: start;
+        margin-left: 20px;
+    }
 }
+
 .data-content:nth-child(1) .data-icons{
     visibility: hidden;
 
