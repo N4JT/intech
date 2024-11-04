@@ -38,7 +38,7 @@ foreach ($orders as $order) {
 ?>
 <div class="data-content-button">
 <span class="mdi--add"></span>
-</div>
+</div>  
 </div>
 </div>
 

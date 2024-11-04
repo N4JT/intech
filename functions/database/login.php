@@ -12,6 +12,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             while ($row = $result->fetch_assoc()) {
                 setcookie("user_id",$row["id"],0,"/");
                 setcookie("username",$row["username"],0,"/");
+                setcookie("role",$row["role"],0,"/"); //pre bezpecnost bych mal fetchnut userID z databazy ale vcilej to je jedno
                 header( "Location: ./../../pages/dashboard.php");
             }
         } else {
