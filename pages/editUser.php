@@ -1,6 +1,9 @@
 
 
 <?php 
+include "./components/head.php";
+
+    
 $selecteduserId = $_GET["user_id"] ?? null;
 ?>
 <div class="data-container">
@@ -26,7 +29,7 @@ function loadUserData() {
     const userSelect = document.getElementById("user_id");
     const userId = userSelect.value;
     
-        fetch(`./../../functions/database/admin/loadUser.php?user_id=${userId}`)
+        fetch(`./../functions/database/admin/loadUser.php?user_id=${userId}`)
             .then(response => response.json())
             .then(data => {
               
