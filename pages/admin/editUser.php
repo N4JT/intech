@@ -7,23 +7,14 @@ $selecteduserId = $_GET["user_id"] ?? null;
     <div class="data-content">
         <form id="edituserForm" class="data-form" action="./../functions/database/edit.php" method="POST">
             <label for="userSelect">Select an user:</label>
-            <select id="userSelect" name="user_id" onchange="loadUserData()"> 
-                <option value="">Select an user</option>
-                <?php foreach ($users as $user): ?>
-                    <option value="<?php echo htmlspecialchars($user['id']); ?>" 
-                        <?php echo ($selecteduserId == $user['id']) ? 'selected' : ''; ?>>
-                        <?php echo htmlspecialchars($user['username']); ?>
-                    </option>
-                <?php endforeach; ?>
-            </select>
 
-            <input type="hidden" name="user_id" id="user_id">
+            <input type="hidden" name="user_id" id="user_id" value=<?php echo $selecteduserId?>>
             
-            <label for="title">Username:</label>
-            <input type="text" id="title" name="title" required>
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
             
-            <label for="date">Date:</label>
-            <input type="date" id="date" name="date" required>
+            <label for="role">Role:</label>
+            <input type="text" id="role" name="role" required>
             <label for="reservations"></label>
             
             <input type="submit" value="Update user">
@@ -32,15 +23,16 @@ $selecteduserId = $_GET["user_id"] ?? null;
 </div>
 <script>
 function loadUserData() {
-    const orderSelect = document.getElementById("user_id");
-    const orderId = orderSelect.value;
+    const userSelect = document.getElementById("user_id");
+    const userId = userSelect.value;
     
-        fetch(`./../functions/database/admin/loadADminData.php?order_id=${orderId}`)
+        fetch(`./../../functions/database/admin/loadUser.php?user_id=${userId}`)
             .then(response => response.json())
             .then(data => {
-                document.getElementById("order_id").value = data.order_id;
-                document.getElementById("title").value = data.title;
-                document.getElementById("date").value = data.date;
+              
+                document.getElementById("user_id").value = data.id;
+                document.getElementById("username").value = data.username;
+                document.getElementById("role").value = data.role;
             });
     
 }
