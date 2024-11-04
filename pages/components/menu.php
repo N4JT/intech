@@ -8,6 +8,7 @@
         <a href= "./remove.php"  class="remove" >ODOBER</a>
         <a href= "./edit.php " class="edit" >UPRAV</a>
         <a href= "./dashboard.php " class= "showall" >ZOBRAZ VSETKY</a>
+        <a href="./logout.php" class="logout">ODLHAS SA</a>
     </div>
 </div> 
 
