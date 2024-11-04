@@ -11,7 +11,7 @@ include './../functions/utils/getUser.php';
 
         <?php
         if($role == "admin"){
-            echo " <a href=./admin.php class=admin>USERS</a>";
+            echo " <a href=./users.php class=admin>USERS</a>";
         }
         
         

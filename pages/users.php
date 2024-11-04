@@ -28,11 +28,14 @@ include './components/menu.php';
     </script>
     
 <div class="data-container">
-   
+    <div class="data-content"><div>USER ID</div> <div>USERNAME</div> <div>ROLE</div><div>RESERVATIONS</div><div class="data-icons"><span class="material-symbols--edit"></span> <span class="pajamas--remove"></span></div></div>
 <?php
 foreach ($users as $user) {
-    echo "<div class=data-content><div>" . htmlspecialchars($user['id']) . "</div> <div>" . htmlspecialchars($user['username']) . "</div><div class=data-icons><span class=material-symbols--edit onClick=handleEdit(".htmlspecialchars($user['username']) .")></span> <span class=pajamas--remove onClick=callPopup(".htmlspecialchars($user['username']) .")></span></div></div>";
-    echo "<div class=line></div>";
+    if($user["role"] == "user"){
+        echo "<div class=data-content><div>" . htmlspecialchars($user['id']) . "</div> <div>" . htmlspecialchars($user['username']) . "</div> <div class=role> ".htmlspecialchars($user["role"])." </div><div>reservations</div> <div class=data-icons><span class=material-symbols--edit onClick=handleEdit(".htmlspecialchars($user['username']) .")></span> <span class=pajamas--remove onClick=callPopup(".htmlspecialchars($user['username']) .")></span></div></div>";
+        echo "<div class=line></div>";
+    }
+   
 }
 
 ?>
