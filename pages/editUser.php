@@ -52,7 +52,8 @@ function loadUserData() {
                     
                    
                     button.onclick = function() {
-                        openPopup(data.orders);
+                        event.preventDefault();
+                        callPopup(data.orders);
                     };
                     
                
