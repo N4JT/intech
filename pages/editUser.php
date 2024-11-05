@@ -22,25 +22,47 @@ $selecteduserId = $_GET["user_id"] ?? null;
                 <option value="user">User</option>
             </select>
             <label for="reservations"></label>
-            
+            <div id="reservations"></div>
             <input type="submit" value="Update user">
         </form>
     </div>
 </div>
 <script>
 function loadUserData() {
-    const userSelect = document.getElementById("user_id");
-    const userId = userSelect.value;
-    
+    const userId = document.getElementById("user_id").value;
+
+    // Check if a user ID is provided before making the fetch request
+    if (userId) {
         fetch(`./../functions/database/admin/loadUser.php?user_id=${userId}`)
             .then(response => response.json())
             .then(data => {
+                
                 document.getElementById("user_id").value = data.user.id;
                 document.getElementById("username").value = data.user.username;
                 document.getElementById("role").value = data.user.role;
-            });
-    
+                
+                
+                const reservations = document.getElementById("reservations");
+                reservations.innerHTML = ""; 
+                
+                if (data.orders.length > 0) {
+                    const button = document.createElement("button");
+                    button.className = "data-button";
+                    button.textContent = "Show Reservations";
+                    
+                   
+                    button.onclick = function() {
+                        openPopup(data.orders);
+                    };
+                    
+               
+                    reservations.appendChild(button);
+                }
+            })
+            .catch(error => console.error("Error fetching user data:", error));
+    }
 }
 
-loadUserData();
+document.addEventListener("DOMContentLoaded", loadUserData);
+
 </script>

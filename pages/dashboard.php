@@ -31,7 +31,7 @@ include './components/menu.php';
    <div class="data-content"><div class="full">DATUM</div><div>TITLE</div><div class="data-icons"></div></div>
 <?php
 foreach ($orders as $order) {
-    echo "<div class=data-content><div class=full>" . htmlspecialchars($order['date']) . "</div> <div>" . htmlspecialchars($order['title']) . "</div><div class=data-icons><span class=material-symbols--edit onClick=handleEdit(".htmlspecialchars($order['order_id']) .")></span> <span class=pajamas--remove onClick=callPopup(".htmlspecialchars($order['order_id']) .")></span></div></div>";
+    echo "<div class=data-content><div class=full>" . htmlspecialchars($order['date']) . "</div> <div>" . htmlspecialchars($order['title']) . "</div><div class=data-icons><span class=material-symbols--edit onClick=handleEdit(".htmlspecialchars($order['order_id']) .")></span> <span class=pajamas--remove onClick=handleRemove(".htmlspecialchars($order['order_id']) .")></span></div></div>";
     echo "<div class=line></div>";
 }
 
