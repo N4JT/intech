@@ -35,10 +35,9 @@ function loadUserData() {
         fetch(`./../functions/database/admin/loadUser.php?user_id=${userId}`)
             .then(response => response.json())
             .then(data => {
-              
-                document.getElementById("user_id").value = data.id;
-                document.getElementById("username").value = data.username;
-                document.getElementById("role").value = data.role;
+                document.getElementById("user_id").value = data.user.id;
+                document.getElementById("username").value = data.user.username;
+                document.getElementById("role").value = data.user.role;
             });
     
 }
