@@ -1,7 +1,7 @@
 <?php
 require(__DIR__ ."/../db.php"); 
 
-echo 
+
 $users = [];
     $sql = "SELECT * FROM users";
     $result = $conn->query($sql); 
