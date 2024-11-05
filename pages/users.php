@@ -23,7 +23,7 @@ include './components/menu.php';
     };
 
     const handleRemove = (id) => {
-        window.location.href = `./remove.php?order_id=${id}`;
+        window.location.href = `./removeUser.php?user_id=${id}`;
     }
     </script>
     
@@ -32,7 +32,7 @@ include './components/menu.php';
 <?php
 foreach ($users as $user) {
     if($user["role"] == "user"){
-        echo "<div class=data-content><div>" . htmlspecialchars($user['id']) . "</div> <div>" . htmlspecialchars($user['username']) . "</div> <div class=role> ".htmlspecialchars($user["role"])." </div><div>reservations</div> <div class=data-icons><span class=material-symbols--edit onClick=handleEdit(".htmlspecialchars($user['id']) .")></span> <span class=pajamas--remove onClick=callPopup(".htmlspecialchars($user['id']) .")></span></div></div>";
+        echo "<div class=data-content><div>" . htmlspecialchars($user['id']) . "</div> <div>" . htmlspecialchars($user['username']) . "</div> <div class=role> ".htmlspecialchars($user["role"])." </div><div>reservations</div> <div class=data-icons><span class=material-symbols--edit onClick=handleEdit(".htmlspecialchars($user['id']) .")></span> <span class=pajamas--remove onClick=handleRemove(".htmlspecialchars($user['id']) .")></span></div></div>";
         echo "<div class=line></div>";
     }
    
