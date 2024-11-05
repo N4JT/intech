@@ -19,7 +19,7 @@ include './components/menu.php';
 ?>
 <script>
      const handleEdit = (id) => {
-        window.location.href = `./admin/editUser.php?user_id=${id}`;
+        window.location.href = `./editUser.php?user_id=${id}`;
     };
 
     const handleRemove = (id) => {

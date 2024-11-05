@@ -8,7 +8,7 @@ $selecteduserId = $_GET["user_id"] ?? null;
 ?>
 <div class="data-container">
     <div class="data-content">
-        <form id="edituserForm" class="data-form" action="./../functions/database/edit.php" method="POST">
+        <form id="edituserForm" class="data-form" action="./../functions/database/admin/updateUser.php" method="POST">
             <label for="userSelect">Select an user:</label>
 
             <input type="hidden" name="user_id" id="user_id" value=<?php echo $selecteduserId?>>
