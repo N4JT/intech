@@ -1,27 +1,35 @@
-const callPopup = (data) => {
+const callPopup = (orders) => {
     let body = document.getElementsByTagName("body")[0]; 
     let popup = document.createElement("div"); 
-    console.log(data);
     popup.classList.add("popup");
 
-    popup.innerHTML = `
-    <div class="data-container">
-    <div class="data-content">
-        <div class="data-form">
-            <div class=data-content><div class=full></div> 
-                <div>${data.title} </div><div class=data-icons>
-                    <span class=material-symbols--edit></span> 
-                    <span class=pajamas--remove></span></div>
+
+    const orderItems = orders.map(order => `
+        <div class="data-content">
+            <div class="data-form">
+                <div class="data-content">
+                    <div class="full">${order.order_id}</div> 
+                    <div>${order.title}</div>
+                    <div class="data-icons">
+                        <span class="material-symbols--edit"></span> 
+                        <span class="pajamas--remove"></span>
+                    </div>
                 </div>
-            <button onclick="closePopup()">Close</button>
-        </div>    
+            </div>
         </div>
-    </div>
-      
+    `).join(''); 
+
+    
+    popup.innerHTML = `
+        <div class="data-container">
+            ${orderItems} <!-- Insert all order items here -->
+            <button onclick="closePopup()">Close</button>
+        </div>
     `;
 
     body.appendChild(popup); 
 };
+
 
 const closePopup = () => {
     let popup = document.querySelector(".popup");
