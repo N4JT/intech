@@ -17,7 +17,10 @@ $selecteduserId = $_GET["user_id"] ?? null;
             <input type="text" id="username" name="username" required>
             
             <label for="role">Role:</label>
-            <input type="text" id="role" name="role" required>
+            <select name="role" id="role">
+                <option value="admin">Admin</option>
+                <option value="user">User</option>
+            </select>
             <label for="reservations"></label>
             
             <input type="submit" value="Update user">
