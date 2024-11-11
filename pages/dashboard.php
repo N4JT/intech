@@ -28,10 +28,27 @@ include './components/menu.php';
     const handleAddNew = () => { 
         window.location.href = "./add.php";
     }
+    const handleSort = () => { 
+        const url = new URL(window.location.href);
+        const data = new URLSearchParams(url.search);
+        try{
+            const param = Number(data.get("sort"));
+            if(param){
+                window.location.href = `./dashboard.php?sort=${+!param}`;
+            }else{
+                window.location.href=`./dashboard.php?sort=1`;
+            }   
+               
+            }catch(Exception){
+                window.location.href=`./dashboard.php`;
+            }
+       
+        
+    }
     </script>
     
 <div class="data-container">
-   <div class="data-content"><div class="full">DATUM</div><div>TITLE</div><div class="data-icons"></div></div>
+   <div class="data-content"><div class="full" onCLick="handleSort()">DATUM</div><div>TITLE</div><div class="data-icons"></div></div>
 <div class="whole">
 
 
