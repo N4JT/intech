@@ -32,6 +32,9 @@ include './components/menu.php';
     
 <div class="data-container">
    <div class="data-content"><div class="full">DATUM</div><div>TITLE</div><div class="data-icons"></div></div>
+<div class="whole">
+
+
 <?php
 foreach ($orders as $order) {
     echo "<div class=data-content><div class=full>" . htmlspecialchars($order['date']) . "</div> <div>" . htmlspecialchars($order['title']) . "</div><div class=data-icons><span class=material-symbols--edit onClick=handleEdit(".htmlspecialchars($order['order_id']) .")></span> <span class=pajamas--remove onClick=handleRemove(".htmlspecialchars($order['order_id']) .")></span></div></div>";
@@ -39,6 +42,7 @@ foreach ($orders as $order) {
 }
 
 ?>
+</div>
 <div class="data-content-button" onClick="handleAddNew()">
 <span class="mdi--add"></span>
 </div>  
