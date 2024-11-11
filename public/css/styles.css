@@ -17,7 +17,7 @@
   .pajamas--remove:hover, .material-symbols--edit:hover {
     transform: scale(1.2);
     cursor: pointer;
-    color: rgba(255, 0, 128, 0.8); /* Brighter color on hover for visibility */
+    color: rgba(255, 0, 128, 0.8); 
 }
 
 
@@ -123,6 +123,15 @@
   
  
 }
+
+.form-redirection{ 
+    color:rgba(200,200,200,1);
+    transition: transform .1s linear;
+    text-align: center;
+}
+.form-redirection:hover{
+    transform:scale(1.2);
+}
 .line{
     width: 100%;
     height: 2px;
@@ -168,7 +177,7 @@ background: linear-gradient(0deg, rgba(200,200,200,1) 1%, rgba(200,200,200,0.5) 
     color:white;
     background: linear-gradient(0deg, rgba(150,80,150,1) 1%, rgba(150,80,150,0.5) 56%, rgba(150,80,1050,0) 100%);
     cursor: pointer;
-    transform: background;
+
 }
 /* overall css pro celou webstranku*/
 body{
