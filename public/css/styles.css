@@ -1,5 +1,12 @@
 
-
+:root {
+    --border-color:rgba(255, 255, 255, 0.2);
+    --shadow:0 4px 30px rgba(0, 0, 0, 0.2); 
+    --secondary-color: #2ecc71;
+    --background-color: rgba(255, 255, 255, 0.15);;
+    --text-color: #333333;
+    --accent-color: #e74c3c;
+  }
 
 
 
@@ -33,7 +40,8 @@
     flex-direction: column;
     border-radius: 40px;
     background-color: rgba(200,200,200,0.1);
-    border:1px solid rgba(200,200,200,0.8);
+    border:1px solid var(--border-color);
+    box-shadow: var(--shadow);
     backdrop-filter: blur(20px);
     max-height:70dvh;
 }
@@ -42,7 +50,13 @@
     overflow-y: scroll;
     scrollbar-width: none;
     overflow-x: hidden;
+    -ms-overflow-style: none;
 }
+
+body::-webkit-scrollbar { 
+    display: none;
+  }
+
 
 
 .data-content{
@@ -219,11 +233,11 @@ body{
     top:0;
     width: 100dvw;
     padding-top: 20px;
-    background: rgba(255, 255, 255, 0.15); /* Transparent white */
+    background: rgba(255, 255, 255, 0.15);
     padding-bottom:20px;
-    backdrop-filter: blur(15px); /* Frosted glass effect */
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2); /* Soft shadow */
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* Light border */
+    backdrop-filter: blur(15px); 
+    box-shadow:var(--shadow);
+    border-bottom: 1px solid var(--border-color);
     display: flex;
     justify-content: center;
    
