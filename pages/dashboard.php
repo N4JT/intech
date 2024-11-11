@@ -25,6 +25,9 @@ include './components/menu.php';
     const handleRemove = (id) => {
         window.location.href = `./remove.php?order_id=${id}`;
     }
+    const handleAddNew = () => { 
+        window.location.href = "./add.php";
+    }
     </script>
     
 <div class="data-container">
@@ -36,7 +39,7 @@ foreach ($orders as $order) {
 }
 
 ?>
-<div class="data-content-button">
+<div class="data-content-button" onClick="handleAddNew()">
 <span class="mdi--add"></span>
 </div>  
 </div>
