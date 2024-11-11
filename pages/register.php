@@ -1,7 +1,12 @@
 <?php
-echo "
-<form method='POST' action='./../functions/database/register.php'>
-    <label for='username'>Username:</label>
+include "./components/head.php";
+?>
+
+<div class="data-container">
+    <div class="data-content">
+<form method='POST'  class="data-form"action='./../functions/database/register.php'>
+<h1 class="nadpis">REGISTER</h1>
+<label for='username'>Username:</label>
     <input type='text' id='username' name='username' required>
     <br>
     <label for='password'>Password:</label>
@@ -9,5 +14,6 @@ echo "
     <br>
     <input type='submit' value='Register'>
 </form>
-";
-?>
+</div>
+
+</div>
