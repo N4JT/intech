@@ -25,6 +25,9 @@ include './components/menu.php';
     const handleRemove = (id) => {
         window.location.href = `./removeUser.php?user_id=${id}`;
     }
+    const handleAddNew = () => { 
+        window.location.href = "./registerNewUser.php";
+    }
     </script>
     
 <div class="data-container">
@@ -39,7 +42,7 @@ foreach ($users as $user) {
 }
 
 ?>
-<div class="data-content-button">
+<div class="data-content-button"  onClick="handleAddNew()">
 <span class="mdi--add"></span>
 </div>  
 </div>
