@@ -13,6 +13,7 @@ include "./components/head.php";
     <input type='password' id='password' name='password' required>
     <br>
     <input type='submit' value='Register'>
+    <a href="./login.php" class="form-redirection">Už máš účet?</a>
 </form>
 </div>
 
