@@ -7,16 +7,15 @@ include './../functions/utils/getUser.php';
 include "./../functions/database/admin/loadADminData.php";
 
 ?>
-
-
+<?php
+include './components/menu.php';
+?>
 <div class="content">
     <h1 class=nadpis>
         USERS
     </h1>
 
-<?php
-include './components/menu.php';
-?>
+
 <script>
      const handleEdit = (id) => {
         window.location.href = `./editUser.php?user_id=${id}`;
