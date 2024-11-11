@@ -7,10 +7,10 @@ include './../functions/utils/getUser.php';
         <ul>
             
       
-        <li><a href="./add.php" class="add">PRIDAJ</a></li>
-        <li><a href= "./remove.php"  class="remove" >ODOBER</a></li>
-        <li><a href= "./edit.php " class="edit" >UPRAV</a></li>
-        <li><a href= "./dashboard.php " class= "showall" >ZOBRAZ VSETKY</a></li>
+        <li><a href="./add.php" class="add">PRIDAJ OBJEDNAVKU</a></li>
+        <li><a href= "./remove.php"  class="remove" >ODOBER OBJEDNAVKU</a></li>
+        <li><a href= "./edit.php " class="edit" >UPRAV OBJEDNAVKU</a></li>
+        <li><a href= "./dashboard.php " class= "showall" >ZOBRAZ VSETKY OBJEDNAVKY</a></li>
 
         <?php
         if($role == "admin"){
