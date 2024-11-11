@@ -4,19 +4,23 @@ include './../functions/utils/getUser.php';
 <body>
 <div class="menu-container">
     <div class="menu">
-        <a href="./add.php" class="add">PRIDAJ</a>
-        <a href= "./remove.php"  class="remove" >ODOBER</a>
-        <a href= "./edit.php " class="edit" >UPRAV</a>
-        <a href= "./dashboard.php " class= "showall" >ZOBRAZ VSETKY</a>
+        <ul>
+            
+      
+        <li><a href="./add.php" class="add">PRIDAJ</a></li>
+        <li><a href= "./remove.php"  class="remove" >ODOBER</a></li>
+        <li><a href= "./edit.php " class="edit" >UPRAV</a></li>
+        <li><a href= "./dashboard.php " class= "showall" >ZOBRAZ VSETKY</a></li>
 
         <?php
         if($role == "admin"){
-            echo " <a href=./users.php class=admin>USERS</a>";
+            echo "  <li><a href=./users.php class=admin>USERS</a></li>";
         }
         
         
         ?> 
-        <a href="./logout.php" class="logout">ODLHAS SA</a>
+             <li><a href="./logout.php" class="logout">ODLHAS SA</a></li>
+        </ul>
     </div>
 </div> 
 

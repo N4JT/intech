@@ -14,15 +14,11 @@
     transition: transform 0.3s ease, color 0.3s ease;
     
   }
-  .material-symbols--edit:hover{
+  .pajamas--remove:hover, .material-symbols--edit:hover {
     transform: scale(1.2);
     cursor: pointer;
-  }
-
-  .pajamas--remove:hover{
-    transform:scale(1.2);
-    cursor:pointer;
-  }
+    color: rgba(255, 0, 128, 0.8); /* Brighter color on hover for visibility */
+}
 
 
 /* DATA CONTAINER - CSS pre dashboard */
@@ -190,12 +186,44 @@ body{
 }
 
 .menu{ 
-    font-size:20px;
-    display:flex;
-    justify-content:space-around;
-    padding:30px;
+    width: auto;
+    padding: 10px 20px;
+    background: rgba(255, 255, 255, 0.15); /* Transparent white */
+    border-radius: 15px;
+    backdrop-filter: blur(15px); /* Frosted glass effect */
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2); /* Soft shadow */
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Light border */
+    display: flex;
+    justify-content: center;
+   
 }
+.menu-container{
+    width: 100dvw;
+}
+.menu ul{
+    list-style: none;
+  display: flex;
+  gap: 20px; /* Space between menu items */
+  padding: 0;
+  margin: 0;
 
+}
+.menu li{
+    margin: 0;
+}
+.menu a{
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: 500;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+    padding: 10px 15px;
+    border-radius: 8px;
+}
+.menu a:hover {
+    color: #bfbfff; /* Slightly lighter color on hover */
+    background: rgba(255, 255, 255, 0.2); /* Light background on hover *//* Slightly lighter color on hover */
+  }
 
 
 /* -------- POPUP ----------*/
@@ -209,3 +237,4 @@ body{
     align-items: center;
     background-color: rgba(0,0,15,0.5);
 }
+

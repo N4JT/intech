@@ -8,15 +8,15 @@ include "./../functions/database/loadData.php";
 
 ?>
 
-
+<?php
+include './components/menu.php';
+?>
 <div class="content">
     <h1 class=nadpis>
         DASHBOARD
     </h1>
 
-<?php
-include './components/menu.php';
-?>
+
 <script>
      const handleEdit = (id) => {
         window.location.href = `./edit.php?order_id=${id}`;
