@@ -49,7 +49,7 @@ include './components/menu.php';
     </script>
     
 <div class="data-container">
-   <div class="data-content"><div class="full" onCLick="handleSort()">DATUM <div id="date-icon"><span class=<?php echo $sort === "ASC" ?  "fa6-solid--arrow-up" : "fa6-solid--arrow-down" ?>></span></div> </div><div>TITLE</div><div class="data-icons"></div></div>
+   <div class="data-content"><div class="full" onCLick="handleSort()"><div class="date-title">DATUM</div><div id="date-icon"><span class=<?php echo $sort === "ASC" ?  "fa6-solid--arrow-up" : "fa6-solid--arrow-down" ?>></span></div> </div><div>TITLE</div><div class="data-icons"></div></div>
 <div class="whole">
 
 

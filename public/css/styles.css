@@ -116,6 +116,15 @@ body::-webkit-scrollbar {
     display: flex;
     padding-left:20px;
 }
+
+#date-icon span:hover{
+    cursor:pointer;
+    color:red;
+}
+.date-title:hover{
+    color:red;
+    cursor:pointer;
+}
 .data-content:nth-child(1) .data-icons{
     visibility: hidden;
 
