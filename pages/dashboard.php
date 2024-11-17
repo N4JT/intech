@@ -35,6 +35,7 @@ include './components/menu.php';
             const param = Number(data.get("sort"));
             if(param){
                 window.location.href = `./dashboard.php?sort=${+!param}`;
+
             }else{
                 window.location.href=`./dashboard.php?sort=1`;
             }   
