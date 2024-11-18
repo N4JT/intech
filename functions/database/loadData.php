@@ -5,7 +5,6 @@ require(__DIR__ . "/../utils/getUser.php");
 $orders = [];
 
 $sort = isset($_GET['sort']) && $_GET['sort'] == 1 ? "ASC" : "DESC";
-echo "this is soooort: ".$sort;
 if(!empty($sort)){
     $sql = "SELECT * FROM orders where userID = $userId ORDER BY date $sort"; 
 }else{

@@ -16,7 +16,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                 header( "Location: ./../../pages/dashboard.php");
             }
         } else {
-            echo "No user found with these credentials";
+            echo "<h1>Prihlasenie sa nepodarilo, skus to znova </h1>";
+            header("refresh:1;url=./../../pages/login.php");
         }
         
     }
