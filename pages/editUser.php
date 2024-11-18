@@ -9,7 +9,6 @@ $selecteduserId = $_GET["user_id"] ?? null;
 <div class="data-container">
     <div class="data-content">
         <form id="edituserForm" class="data-form" action="./../functions/database/admin/updateUser.php" method="POST">
-            <label for="userSelect">Select an user:</label>
 
             <input type="hidden" name="user_id" id="user_id" value=<?php echo $selecteduserId?>>
             
@@ -31,7 +30,6 @@ $selecteduserId = $_GET["user_id"] ?? null;
 function loadUserData() {
     const userId = document.getElementById("user_id").value;
 
-    // Check if a user ID is provided before making the fetch request
     if (userId) {
         fetch(`./../functions/database/admin/loadUser.php?user_id=${userId}`)
             .then(response => response.json())
@@ -45,7 +43,7 @@ function loadUserData() {
                 const reservations = document.getElementById("reservations");
                 reservations.innerHTML = ""; 
                 
-                if (data.orders.length > 0) {
+               /*  if (data.orders.length > 0) {
                     const button = document.createElement("button");
                     button.className = "data-button";
                     button.textContent = "Show Reservations";
@@ -58,7 +56,9 @@ function loadUserData() {
                     
                
                     reservations.appendChild(button);
-                }
+                } */ 
+
+                /* JE MOZNE TAM DOBUDUCNA PRIDAT AJ TOTO, ALE KEDZE SA NEJEDNA O REALNY PROGRAM JE TO ASI ZBYTOCNE*/ 
             })
             .catch(error => console.error("Error fetching user data:", error));
     }

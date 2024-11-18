@@ -31,6 +31,7 @@ include './components/menu.php';
     
 <div class="data-container">
     <div class="data-content"><div>USER ID</div> <div>USERNAME</div> <div>ROLE</div><div>RESERVATIONS</div><div class="data-icons"><span class="material-symbols--edit"></span> <span class="pajamas--remove"></span></div></div>
+<div class="whole">
 <?php
 foreach ($users as $user) {
     $reservation = htmlspecialchars(getLatestReservation($user['id'])); 
@@ -41,9 +42,11 @@ foreach ($users as $user) {
 }
 
 ?>
+</div>
 <div class="data-content-button"  onClick="handleAddNew()">
 <span class="mdi--add"></span>
-</div>  
+</div> 
+
 </div>
 </div>
 
