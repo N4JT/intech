@@ -34,7 +34,7 @@ include './components/menu.php';
 <?php
 foreach ($users as $user) {
     $reservation = htmlspecialchars(getLatestReservation($user['id'])); 
-        echo "<div class=data-content><div>" . htmlspecialchars($user['id']) . "</div> <div>" . htmlspecialchars($user['username']) . "</div> <div class=role> ".htmlspecialchars($user["role"])." </div><div>" . $reservation . "</div> <div class=data-icons><span class=material-symbols--edit onClick=handleEdit(".htmlspecialchars($user['id']) .")></span> <span class=pajamas--remove onClick=handleRemove(".htmlspecialchars($user['id']) .")></span></div></div>";
+        echo "<div class=data-content><div>" . htmlspecialchars($user['id']) . "</div> <div>" . htmlspecialchars($user['username']) . "</div> <div class=role> ".htmlspecialchars($user["role"])." </div><div class=rezervation>" . $reservation . " <span class=tooltip-text>Show more</span></div> <div class=data-icons><span class=material-symbols--edit onClick=handleEdit(".htmlspecialchars($user['id']) .")></span> <span class=pajamas--remove onClick=handleRemove(".htmlspecialchars($user['id']) .")></span></div></div>";
         echo "<div class=line></div>";
         
    
