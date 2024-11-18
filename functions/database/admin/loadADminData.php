@@ -10,7 +10,7 @@ $users = [];
             $users[] = $row; 
         }
     }else{
-        echo "ESTE NEEXISTUJE, SKUS TREBA VYTVORIT JEDNU XD";
+        
     }
 
 
