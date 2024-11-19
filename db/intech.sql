@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hostiteľ: 127.0.0.1
--- Čas generovania: St 30.Okt 2024, 20:29
+-- Čas generovania: Út 19.Nov 2024, 09:39
 -- Verzia serveru: 10.4.32-MariaDB
 -- Verzia PHP: 8.2.12
 
@@ -29,10 +29,24 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `orders` (
   `order_id` int(11) NOT NULL,
-  `title` int(11) NOT NULL,
-  `date` int(11) NOT NULL,
+  `title` varchar(11) NOT NULL,
+  `date` date NOT NULL,
   `userID` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Sťahujem dáta pre tabuľku `orders`
+--
+
+INSERT INTO `orders` (`order_id`, `title`, `date`, `userID`) VALUES
+(1, 'cozeee', '2024-11-14', 2),
+(2, 'xdxd', '2024-11-25', 2),
+(4, 'dqwdqwdqwdq', '2024-11-06', 2),
+(5, 'qwdqwdqw', '2024-11-01', 2),
+(6, 'wqdqwd', '2024-10-31', 2),
+(8, 'dqwdqwd', '2024-11-17', 2),
+(9, 'treba TADYT', '2025-03-12', 2),
+(10, 'XDQDqwdqw', '2024-11-08', 2);
 
 -- --------------------------------------------------------
 
@@ -52,8 +66,13 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `username`, `password`, `role`) VALUES
-(1, 'x', 'x', ''),
-(2, 'c', 'c', 'user');
+(1, 'x', 'x', 'admin'),
+(2, 'c', 'c', 'user'),
+(3, 'q', 'q', 'user'),
+(6, 'r', 'e', 'user'),
+(9, 'qwdqwdq', 'qwdqw', 'user'),
+(10, 'cq', 'cq', 'user'),
+(11, 'dqwdwq', 'dwqdqw', 'user');
 
 --
 -- Kľúče pre exportované tabuľky
@@ -80,13 +99,13 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT pre tabuľku `orders`
 --
 ALTER TABLE `orders`
-  MODIFY `order_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `order_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT pre tabuľku `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- Obmedzenie pre exportované tabuľky
