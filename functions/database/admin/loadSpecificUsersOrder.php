@@ -4,7 +4,7 @@ require(__DIR__ ."/../db.php");
 
 function getLatestReservation($user_id){ 
     global $conn;
-        $sql = "SELECT  date FROM orders WHERE userID = $user_id AND date >= CURDATE() 
+        $sql = "SELECT  date FROM xmestanekt_orders WHERE userID = $user_id AND date >= CURDATE() 
     ORDER BY date ASC 
     LIMIT 1; ";
         $result = $conn->query($sql);

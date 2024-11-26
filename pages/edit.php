@@ -10,7 +10,7 @@ if($selectedOrderId == null){
 ?>
 <div class="data-container">
     <div class="data-content">
-
+ 
         <form id="editOrderForm" class="data-form" action="./../functions/database/edit.php" method="POST">
             <label for="orderSelect">Select an Order:</label>
             <select id="orderSelect" name="order_id" onchange="loadOrderData()"> 

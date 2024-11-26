@@ -6,9 +6,9 @@ $orders = [];
 
 $sort = isset($_GET['sort']) && $_GET['sort'] == 1 ? "ASC" : "DESC";
 if(!empty($sort)){
-    $sql = "SELECT * FROM orders where userID = $userId ORDER BY date $sort"; 
+    $sql = "SELECT * FROM xmestanekt_orders where userID = $userId ORDER BY date $sort"; 
 }else{
-    $sql = "SELECT * FROM orders where userID = $userId";
+    $sql = "SELECT * FROM xmestanekt_orders where userID = $userId";
 }
 
     $result = $conn->query($sql); 

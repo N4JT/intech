@@ -6,7 +6,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     $password=$_POST["password"];
 
     if(!empty($username) || empty($password)){
-        $sql = "SELECT * FROM users where username='$username' AND password='$password'";
+        $sql = "SELECT * FROM xmestanekt_users where username='$username' AND password='$password'";
         $result = $conn->query($sql);   
         if ($result->num_rows > 0) {
             while ($row = $result->fetch_assoc()) {

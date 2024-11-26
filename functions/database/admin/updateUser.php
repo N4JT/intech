@@ -7,7 +7,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     $username = $_POST["username"];
     $id = $_POST["user_id"];
 
-    $sql = "UPDATE users SET username = '$username', role = '$role' WHERE id = $id";
+    $sql = "UPDATE xmestanekt_users SET username = '$username', role = '$role' WHERE id = $id";
     $result = $conn->query($sql);
 
     if ($result) {  
